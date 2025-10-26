@@ -1,0 +1,145 @@
+/* ==========================================================================
+   GOOGLE FONT IMPORT
+   ========================================================================== */
+/*Outfit*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
+
+/* ==========================================================================
+   CSS VARIABLES & RESET
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*ROOT FORMATTING*/
+:root {
+  --main-site-font: "Outfit", sans-serif;
+  --site-bg-color: #121826;
+  --dark-text-color: #9da3ae;
+  --heading-color: #e5e7eb;
+  --card-bg: #212936;
+  --card-heading: #d2d5da;
+  --yellow-icon: #fceed8;
+  --baby-blue-icon: #dee9fc;
+  --pink-icon: #fbe5e6;
+}
+
+/*Body Formatting*/
+body {
+  background-color: var(--site-bg-color);
+  background-image: url(../images/backgroundImage.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: var(--main-site-font);
+}
+
+p {
+  color: var(--dark-text-color);
+}
+
+h1 {
+  color: var(--heading-color);
+}
+/* ==========================================================================
+    FEATURE SECTION FORMATTING
+   ========================================================================== */
+.features {
+  margin-top: 48px;
+  padding: 15px;
+}
+
+/*Format section title*/
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/*Format subsection text*/
+.subtext {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/*Format card container*/
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 48px;
+}
+/*Format card items*/
+.card-item {
+  background-color: var(--card-bg);
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
+  padding: 24px;
+  width: 316px;
+  border-radius: 10px;
+}
+
+/*Format icons*/
+.card-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.first-icon {
+  background-color: var(--yellow-icon);
+}
+
+.second-icon {
+  background-color: var(--baby-blue-icon);
+}
+
+.third-icon {
+  background-color: var(--pink-icon);
+}
+
+/*Format card text margins*/
+.card-item h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--card-heading);
+}
+
+.card-item p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.card-item img {
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+/*TABLET QUERY*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /*Format container orientation*/
+  .card-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+/*DESKTOP QUERY*/
+@media screen and (min-width: 1025px) {
+  /*Format container orientation*/
+  .card-container {
+    flex-direction: row;
+  }
+}
